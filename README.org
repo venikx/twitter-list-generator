@@ -16,7 +16,7 @@ installed on your machine:
 * Development
 Compile and watch the clojure source code
 #+begin_src sh
-# in project-root
+# in the project-root
 clj --main cljs.main --compile-opts compile-opts.edn --compile tpt.core --watch src
 #+end_src
 
