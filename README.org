@@ -1,0 +1,30 @@
+#+TITLE: Twitter List Generator
+
+* Preqrequisits
+If you are running /Nix/ or /NixOS/, run run the ~shell.nix~ to install the
+required packages (or when using ~direnv~ these packages will be installed when
+navigating inside the folder).
+
+If you are *not* running /Nix/ or /NixOS/ make sure the following packages are
+installed on your machine:
+
+- Clojure
+- Nodejs
+  - web-ext
+  - prettier
+
+* Development
+Compile and watch the clojure source code
+#+begin_src sh
+# in project-root
+clj --main cljs.main --compile-opts compile-opts.edn --compile tpt.core --watch src
+#+end_src
+
+Reload the addon when detecting a change
+#+begin_src sh
+# in addon folder
+web-ext run --start-url https://www.mozilla.org/en-US/
+#+end_src
+
+* External resources
+- [[https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension][Firefox Extensions: Your first extension]]

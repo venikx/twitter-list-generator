@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Twitter List Generator",
+  "version": "1.0",
+  "description": "Generate Twitter lists based on the tags given to Twitter profiles.",
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["js/core.js"]
+    }
+  ]
+}
